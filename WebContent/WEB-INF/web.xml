@@ -13,7 +13,7 @@
     <description></description>
     <display-name>DemoController</display-name>
     <servlet-name>DemoController</servlet-name>
-    <servlet-class>controller.DemoController</servlet-class>
+    <servlet-class>com.controller.DemoController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DemoController</servlet-name>
@@ -23,7 +23,7 @@
     <description></description>
     <display-name>PrintData</display-name>
     <servlet-name>PrintData</servlet-name>
-    <servlet-class>controller.PrintData</servlet-class>
+    <servlet-class>com.controller.PrintData</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PrintData</servlet-name>
@@ -33,10 +33,20 @@
     <description></description>
     <display-name>Sum</display-name>
     <servlet-name>Sum</servlet-name>
-    <servlet-class>controller.Sum</servlet-class>
+    <servlet-class>com.controller.Sum</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Sum</servlet-name>
     <url-pattern>/sum</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductController</display-name>
+    <servlet-name>ProductController</servlet-name>
+    <servlet-class>com.controller.ProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductController</servlet-name>
+    <url-pattern>/prod</url-pattern>
   </servlet-mapping>
 </web-app>
