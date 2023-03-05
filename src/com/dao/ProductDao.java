@@ -21,7 +21,8 @@ public class ProductDao {
 				pstmt.setString(1, productBean.getpName());
 				pstmt.setInt(2, productBean.getpPrice());
 				
-				int res = pstmt.executeUpdate();
+
+				int res =0;
 				if(res>0) {
 					flag =true;
 				}
