@@ -49,4 +49,14 @@
     <servlet-name>ProductController</servlet-name>
     <url-pattern>/prod</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductListServelt</display-name>
+    <servlet-name>ProductListServelt</servlet-name>
+    <servlet-class>com.controller.ProductListServelt</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductListServelt</servlet-name>
+    <url-pattern>/ProductListServelt</url-pattern>
+  </servlet-mapping>
 </web-app>
