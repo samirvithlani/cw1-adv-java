@@ -6,14 +6,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bean.ProductBean;
 import com.dao.ProductDao;
 
 /**
- * Servlet implementation class ProductController
+ * Servlet implementation class ProductDeleteServlet
  */
-public class ProductController extends HttpServlet {
+public class ProductDeleteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+    /**
+	 * @see HttpServlet#HttpServlet()
+	 */
 
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
@@ -21,24 +24,17 @@ public class ProductController extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// TODO Auto-generated method stub
 
-		int pPrice = Integer.parseInt(request.getParameter("txtPrice"));
-		String pName = request.getParameter("txtPName");
-
-		ProductBean productBean = new ProductBean();
-		productBean.setpName(pName);
-		productBean.setpPrice(pPrice);
-
-		// create an object of dao...
-		ProductDao productDao = new ProductDao();
-		boolean flag = productDao.addProduct(productBean);
-		if (flag == true) {
+		System.out.println("delete called...");
+		int id = Integer.parseInt(request.getParameter("id"));
+		if (new ProductDao().deleteProduct(id)) {
 
 			response.sendRedirect("ProductListServelt");
-		} else {
-			response.sendRedirect("error.html");
 		}
-
+		else {
+			response.sendRedirect("ProductListServelt");
+		}
 	}
 
 }

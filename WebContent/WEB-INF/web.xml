@@ -59,4 +59,14 @@
     <servlet-name>ProductListServelt</servlet-name>
     <url-pattern>/ProductListServelt</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductDeleteServlet</display-name>
+    <servlet-name>ProductDeleteServlet</servlet-name>
+    <servlet-class>com.controller.ProductDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductDeleteServlet</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
 </web-app>

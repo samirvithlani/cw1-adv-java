@@ -18,6 +18,7 @@
 			<th>ID</th>
 			<th>name</th>
 			<th>price</th>
+			<th>ACTION</th>
 		</tr>
 		<%
 			for (int i = 0; i < products.size(); i++) {
@@ -28,6 +29,9 @@
 			<td><%=productBean.getpId()%></td>
 			<td><%=productBean.getpName()%></td>
 			<td><%=productBean.getpPrice()%></td>
+			<td>
+			<a href ="delete?id=<%=productBean.getpId()%>">DELETE</a>
+			</td>
 
 		</tr>
 		<%
