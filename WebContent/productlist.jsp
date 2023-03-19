@@ -31,6 +31,7 @@
 			<td><%=productBean.getpPrice()%></td>
 			<td>
 			<a href ="delete?id=<%=productBean.getpId()%>">DELETE</a>
+			<a href ="edit?id=<%=productBean.getpId()%>">UPDATE</a>
 			</td>
 
 		</tr>
